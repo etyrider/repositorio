@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+</head>
+
+<div id="app">
+<<<<<<< HEAD
+    <input type="text" class="form-control" v-model="criterioDeBusqueda"
+        placeholder="Ingresar un criterio de busqueda...">
+=======
+    <input type="text" class="form-control" v-model="criterioDeBusqueda" placeholder="Ingresar un criterio de busqueda...">
+>>>>>>> 94e792f8f98151ecf714bf809555c4ada257b918
+    <br>
+    <div class="card-deck">
+        <div class="card" v-for="persona in personasFiltradas">
+            <div class="card-body">
+                <h5 class="card-title">{{getNombreCompleto(persona)}}</h5>
+                <p class="card-text">dni {{persona.dni}}</p>
+                <a href="#" class="card-link">{{persona.correo}}</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</html>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            criterioDeBusqueda: '',
+            //Aquí, en este array es donde tienen que agregar su información
+            personas:
+                [
+<<<<<<< HEAD
+                    { nombre: 'Maria Veronica', apellido: 'Racca', dni: 31303715, correo: 'veronica.racca@gmail.com' },
+                    { nombre: 'Gaspar', apellido: 'De Carlo', dni: 29502368, correo: 'gdecar@ort.edu.ar' },
+                    { nombre: 'Sofía', apellido: 'Ferragut', dni: 31227445, correo: 'sferragut@ort.edu.ar' },
+                    { nombre: 'Guillermo', apellido: 'Pérez', dni: 26866875, correo: 'gperez78@gmail.com' },
+                    { nombre: 'Moses', apellido: 'Levy', dni: 92444204, correo: 'moses.levy@gmail.com' },
+                    { nombre: 'Axel', apellido: 'Müller', dni: 40730487, correo: 'axelchristian.muller@gmail.com' },
+                    { nombre: 'Damian', apellido: 'Kravetz', dni: 41334023, correo: 'kravetzdamian@gmail.com' },
+                    { nombre: 'Matias', apellido: 'Atencio', dni: 35426807, correo: 'matias.atencio@hotmail.com' },
+                    { nombre: 'Agustin', apellido: 'Molina', dni: 42433724, correo: 'lamolinaljr@gmail.com' },
+                    { nombre: 'Micaela', apellido: 'Srur', dni: 42724039, correo: 'srurmica@gmail.com' },
+                    { nombre: 'Maximiliano', apellido: 'Lentini', dni: 37247296, correo: 'lentini.maximiliano@gmail.com' },
+                    { nombre: 'Christian', apellido: 'Schuldhaus', dni: 36807305, correo: 'christian.schuldhaus@gmail.com' },
+                    { nombre: 'Nicolás Ignacio', apellido: 'Reyes Urrutia', dni: 35363299, correo: 'nicolas.reyes90@gmail.com' },
+                    { nombre: 'Nicolás Julio', apellido: 'Bagini', dni: 38993835, correo: 'nicolasbagini@gmail.com' },
+                    { nombre: 'Julian Exequiel', apellido: 'Luco Contestin', dni: 25540214, correo: 'julianluco@gmail.com' },
+                    { nombre: 'Lucas Andres', apellido: 'Pose', dni: 38857981, correo: 'poselucas43@gmail.com' },
+                    { nombre: 'Santiago', apellido: 'Muñoz', dni: 94400619, correo: 'santiago5287@gmail.com' },
+                    { nombre: 'Victoria', apellido: 'Rios', dni: 33781273, correo: 'riosvick@gmail.com' },
+                    { nombre: 'Roni', apellido: 'Jordan Lopez', dni: 41554701, correo: 'juventud1@live.com.ar' },
+                    { nombre: 'Francisco', apellido: 'Martínez Eluen', dni: 39184623, correo: 'martinezeluen@gmail.com' },
+                    { nombre: 'Martin', apellido: 'Marandola', dni: 38625477, correo: 'martinfmarandola@gmail.com' },
+                    { nombre: 'Martin', apellido: 'Perez', dni: 39169274, correo: 'martinperez0211.mp@gmail.com' },
+                    { nombre: 'Gabriel', apellido: 'Ambrosio', dni: 39171465, correo: 'gabe6614@gmail.com' },
+                    { nombre: 'Sebastian', apellido: 'Baggieri', dni: 37983495, correo: 'xerichos@gmail.com' },
+                    { nombre: 'Danilo', apellido: 'Escudero', dni: 39644702, correo: 'daniloescudero96@gmail.com' },
+                    { nombre: 'Francisco', apellido: 'Agraz', dni: 40949755, correo: 'franciscoagraz98@gmail.com' },
+                    { nombre: 'Francisco', apellido: 'Agraz', dni: 40949755, correo: 'franciscoagraz98@gmail.com' },
+                    { nombre: 'Leandro', apellido: 'Montesoro', dni: 37942231, correo: 'montesoro.leandro@gmail.com' },
+                    { nombre: 'Kevin', apellido: 'Zatel', dni: 38995211, correo: 'kevinzatel@gmail.com' }
+=======
+                    {nombre: 'Maria Veronica', apellido: 'Racca', dni: 31303715, correo: 'veronica.racca@gmail.com'},
+                    { nombre: 'Gaspar', apellido: 'De Carlo', dni: 29502368, correo: 'gdecar@ort.edu.ar' },
+                    { nombre: 'Sofía', apellido: 'Ferragut', dni: 31227445, correo: 'sferragut@ort.edu.ar' },
+                    { nombre: 'Guillermo', apellido: 'Pérez', dni: 26866875, correo: 'gperez78@gmail.com' },
+                    { nombre: 'Moses', apellido: 'Levy', dni: 92444204, correo: 'moses.levy@gmail.com'},
+                    { nombre: 'Axel', apellido: 'Müller', dni: 40730487, correo: 'axelchristian.muller@gmail.com'},
+                    { nombre: 'Damian', apellido: 'Kravetz', dni: 41334023, correo: 'kravetzdamian@gmail.com'},
+                    { nombre: 'Matias', apellido: 'Atencio', dni: 35426807, correo: 'matias.atencio@hotmail.com'},
+					{ nombre: 'Agustin', apellido: 'Molina', dni: 42433724, correo: 'lamolinaljr@gmail.com'},
+                    { nombre: 'Micaela', apellido: 'Srur', dni: 42724039, correo: 'srurmica@gmail.com'},
+                    { nombre: 'Maximiliano', apellido: 'Lentini', dni: 37247296, correo: 'lentini.maximiliano@gmail.com'},
+					{ nombre: 'Christian', apellido: 'Schuldhaus', dni: 36807305, correo: 'christian.schuldhaus@gmail.com'},
+					{ nombre: 'Nicolás Ignacio', apellido: 'Reyes Urrutia', dni: 35363299, correo: 'nicolas.reyes90@gmail.com'},
+					{ nombre: 'Nicolás Julio', apellido: 'Bagini', dni: 38993835, correo: 'nicolasbagini@gmail.com'},
+					{ nombre: 'Julian Exequiel', apellido: 'Luco Contestin', dni: 25540214, correo: 'julianluco@gmail.com'},
+					{ nombre: 'Lucas Andres', apellido: 'Pose', dni: 38857981, correo: 'poselucas43@gmail.com'},
+					{ nombre: 'Santiago', apellido: 'Muñoz', dni: 94400619, correo: 'santiago5287@gmail.com'},
+					{ nombre: 'Victoria', apellido: 'Rios', dni: 33781273, correo: 'riosvick@gmail.com'},
+					{ nombre: 'Roni', apellido: 'Jordan Lopez', dni: 41554701, correo: 'juventud1@live.com.ar'},
+                    { nombre: 'Francisco', apellido: 'Martínez Eluen', dni: 39184623, correo: 'martinezeluen@gmail.com'},
+                    { nombre: 'Martin', apellido: 'Marandola', dni: 38625477, correo: 'martinfmarandola@gmail.com'},
+                    { nombre: 'Martin', apellido: 'Perez', dni: 39169274, correo: 'martinperez0211.mp@gmail.com'},
+                    { nombre: 'Gabriel', apellido: 'Ambrosio', dni: 39171465, correo: 'gabe6614@gmail.com' },
+                    { nombre: 'Sebastian', apellido: 'Baggieri', dni: 37983495, correo: 'xerichos@gmail.com'},
+                    { nombre: 'Danilo', apellido: 'Escudero', dni: 39644702, correo: 'daniloescudero96@gmail.com'},
+                    { nombre: 'Francisco', apellido: 'Agraz', dni: 40949755, correo: 'franciscoagraz98@gmail.com'},
+                    { nombre: 'Francisco', apellido: 'Agraz', dni: 40949755, correo: 'franciscoagraz98@gmail.com'},
+                    { nombre: 'Leandro', apellido: 'Montesoro', dni: 37942231, correo: 'montesoro.leandro@gmail.com'},
+					{ nombre: 'Emiliano', apellido: 'Carlucci', dni: 36156652, correo: 'emii.carlucci91@gmail.com'},
+					{ nombre: 'Esteban', apellido: 'Rodriguez', dni: 30513759, correo: 'etyrider@hotmail.com'}
+>>>>>>> 94e792f8f98151ecf714bf809555c4ada257b918
+
+                ]
+        },
+        computed: {
+            personasFiltradas() {
+                return this.personas.filter((persona) => {
+                    let registroCompleto = `${persona.nombre}${persona.apellido}${persona.dni}${persona.correo}`
+                    return registroCompleto.toLowerCase().includes(this.criterioDeBusqueda.toLowerCase())
+                });
+            }
+        },
+        methods: {
+            getNombreCompleto(persona) {
+                return `${persona.nombre} ${persona.apellido}`
+            }
+
+        }
+    });
+</script>
